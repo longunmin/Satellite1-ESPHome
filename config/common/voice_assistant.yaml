@@ -48,8 +48,8 @@ micro_wake_word:
 #      id: hey_jarvis
 #    - model: okay_nabu
 #      id: okay_nabu 
-    - model: https://github.com/kahrendt/microWakeWord/releases/download/stop/stop.json
-      id: stop
+#    - model: https://github.com/kahrendt/microWakeWord/releases/download/stop/stop.json
+#      id: stop
       internal: true
     - model: https://raw.githubusercontent.com/longunmin/micro-wake-word-models/refs/heads/main/models/hey_friday.json
       id: hey_friday
