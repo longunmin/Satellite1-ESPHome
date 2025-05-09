@@ -44,10 +44,10 @@ microphone:
 micro_wake_word:
   id: mww
   models:
-    - model: hey_jarvis
-      id: hey_jarvis
-    - model: okay_nabu
-      id: okay_nabu 
+#    - model: hey_jarvis
+#      id: hey_jarvis
+#    - model: okay_nabu
+#      id: okay_nabu 
     - model: https://github.com/kahrendt/microWakeWord/releases/download/stop/stop.json
       id: stop
       internal: true
