@@ -50,7 +50,6 @@ micro_wake_word:
       id: okay_nabu 
     - model: https://github.com/JohnnyPrimus/Custom_V2_MicroWakeWords/blob/main/models/hey_friday/hey_friday.json
       id: hey_friday
-      internal: true
     - model: https://github.com/kahrendt/microWakeWord/releases/download/stop/stop.json
       id: stop
       internal: true
