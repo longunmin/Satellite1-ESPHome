@@ -21,7 +21,6 @@ button:
     id: timer_script_button_press_event
     name: "Timer Script"
     icon: mdi:button-pointer
-    device_class: button
     on_press:
       - script.execute: control_leds
 
