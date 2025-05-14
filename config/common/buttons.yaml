@@ -30,6 +30,13 @@ event:
       - triple_press
       - long_press
 
+  - platform: template
+    id: timer_script_button_press_event
+    name: "Timer Script"
+    icon: mdi:button-pointer
+    device_class: button
+    on_press:
+      - script.execute: hallway_light_script
 
 binary_sensor:
   - platform: gpio
