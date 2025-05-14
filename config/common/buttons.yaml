@@ -16,6 +16,15 @@ globals:
     restore_value: no
     initial_value: 'false'
 
+button:
+  - platform: template
+    id: timer_script_button_press_event
+    name: "Timer Script"
+    icon: mdi:button-pointer
+    device_class: button
+    on_press:
+      - script.execute: control_leds
+
 event:
   # Event entity exposed to the user to automate on complex action button presses.
   # The simple press is not exposed as it is used to control the device itself.
@@ -29,14 +38,6 @@ event:
       - double_press
       - triple_press
       - long_press
-
-  - platform: template
-    id: timer_script_button_press_event
-    name: "Timer Script"
-    icon: mdi:button-pointer
-    device_class: button
-    on_press:
-      - script.execute: control_leds
 
 binary_sensor:
   - platform: gpio
