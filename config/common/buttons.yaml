@@ -36,7 +36,7 @@ event:
     icon: mdi:button-pointer
     device_class: button
     on_press:
-      - script.execute: hallway_light_script
+      - script.execute: control_leds
 
 binary_sensor:
   - platform: gpio
