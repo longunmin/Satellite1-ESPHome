@@ -103,3 +103,37 @@ script:
           }
           id(is_timer_active) = output;
 
+
+text_sensor:
+  - platform: homeassistant
+    name: "HA Timer State"
+    entity_id: timer.timer
+    id: ha_timer_state
+
+  - platform: homeassistant
+    name: "HA Timer Duration"
+    entity_id: timer.timer
+    attribute: duration
+    id: ha_timer_duration
+
+  - platform: homeassistant
+    name: "HA Timer Remaining"
+    entity_id: timer.timer
+    attribute: remaining
+    id: ha_timer_remaining
+
+sensor:
+  - platform: template
+    name: "HA Timer Remaining Seconds"
+    id: ha_timer_remaining_seconds
+    update_interval: 10s
+    lambda: |-
+      if (id(ha_timer_remaining).has_state()) {
+        int hours = 0, minutes = 0, seconds = 0;
+        sscanf(id(ha_timer_remaining).state.c_str(), "%d:%d:%d", &hours, &minutes, &seconds);
+        return (hours * 3600) + (minutes * 60) + seconds;
+      } else {
+        return 0.0;
+      }
+    unit_of_measurement: "s"
+    accuracy_decimals: 0
