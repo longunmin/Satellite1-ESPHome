@@ -22,9 +22,9 @@ button:
     name: "Timer Script"
     icon: mdi:button-pointer
     on_press:
-      - script.execute: check_if_timers_active
-      - delay: 1s
-      - script.execute: control_leds
+      - script.execute: control_leds_timer_ticking
+#      - delay: 1s
+#      - script.execute: control_leds
 
 event:
   # Event entity exposed to the user to automate on complex action button presses.
