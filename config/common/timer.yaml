@@ -111,16 +111,14 @@ text_sensor:
     id: ha_timer_state
 
   - platform: homeassistant
-    name: "HA Timer Duration"
-    entity_id: timer.timer
-    attribute: duration
-    id: ha_timer_duration
+    name: "Timer Remaining (Seconds)"
+    entity_id: sensor.timer_remaining_seconds
+    id: ha_timer_remaining
 
   - platform: homeassistant
-    name: "HA Timer Remaining"
-    entity_id: timer.timer
-    attribute: remaining
-    id: ha_timer_remaining
+    name: "Timer Duration (Seconds)"
+    entity_id: sensor.timer_duration_seconds
+    id: ha_timer_duration
 
 sensor:
   - platform: template
